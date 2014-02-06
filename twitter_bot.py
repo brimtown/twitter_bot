@@ -33,12 +33,6 @@ class TwitterBot:
 
 	#Given a target, probabilistically generates the next character
 	def generate_next_char(self, target):
-		if len(target) != self.level:
-			return "x"
-
-		if self.source.find(target) == -1:
-			return "~"
-
 		num_matches = self.source.count(target)
 
 		#If there is more than once occurence of the target
